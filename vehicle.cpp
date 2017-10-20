@@ -119,7 +119,7 @@ double Vehicle::calc_avoid_other_cars(string state, map<int, vector<vector<int> 
 //      cout << "expect ego s=" << my_s << endl;
     } else {
       //p[0] lane, p[1] s
-      if (p[0] == t_lane && my_s < p[1] && p[1] < my_s + buffer) {
+      if (p[0] == t_lane && my_s <= p[1] && p[1] < my_s + buffer) {
         min_d = p[1] - my_s;
       }
     }
